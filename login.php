@@ -3,7 +3,7 @@
   /* TO-DO: Include header.php
             Hint: header.php is inside the includes folder and already connects to the database
   */
-
+  include 'includes/header.php';
 
   
   if ($logged_in) {                                       // If already logged in  
@@ -26,6 +26,7 @@
               Hint: You defined authenticate() earlier in session.php
     */
 
+    $user = authenticate($pdo, $username, $password);
 
 
     if ($user) {                               // If user data returned

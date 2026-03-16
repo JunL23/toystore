@@ -48,6 +48,16 @@
           4. Returns the matching user row if found
 	*/
 	
+	function authenticate(PDO $pdo, string $username, string $password) {
+		$sql = "SELECT *
+				FROM customer
+				WHERE username = :username AND password = :password;";
+		
+		$user = pdo($pdo, $sql, ['username' => $username, 'password' => $password])->fetch();
+
+		return $user;
+	}
+
 	
 ?>
 
