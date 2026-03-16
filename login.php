@@ -1,10 +1,20 @@
 <?php
 
-  /* TO-DO: Include header.php
-            Hint: header.php is inside the includes folder and already connects to the database
+  /* TO-DO: Include database-connection.php to connect to the database
+          Hint: Use require_once to ensure the file is only loaded once.
+                Load this before any redirects or login logic.
+                Both header.php and database-connection.php are inside the includes folder
   */
-  include 'includes/header.php';
 
+  require_once('database-connection.php');
+
+  /* TO-DO: Include session.php to handle login sessions
+          Hint: Use require_once to avoid redeclaring functions if the file is loaded elsewhere.
+                Load this before any redirects or login logic.
+                Both header.php and session.php are inside the includes folder
+  */
+
+  require_once('session.php');
   
   if ($logged_in) {                                       // If already logged in  
     header('Location: profile.php');                     // Redirect to profile page 
@@ -35,6 +45,15 @@
       exit;                                 // Stop further code running 
     }
   }
+
+
+   /* TO-DO: Include header.php
+            Hint: Include this AFTER redirects so that HTML output does not break header() functions.
+                  header.php is inside the includes folder and already connects to the database
+  */
+
+  require_once('header.php');
+  
 ?> 
 
 <div id="content" class="login-container animate-bottom">
