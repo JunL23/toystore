@@ -15,6 +15,7 @@
   */
 
   require_once('includes/session.php');
+
   
   if ($logged_in) {                                       // If already logged in  
     header('Location: profile.php');                     // Redirect to profile page 
@@ -38,7 +39,6 @@
 
     $user = authenticate($pdo, $username, $password);
 
-
     if ($user) {                               // If user data returned
       login($user);                           // Call the login function to update session data                                             
       header('Location: profile.php');       // Redirect to profile page 
@@ -46,14 +46,13 @@
     }
   }
 
-
-   /* TO-DO: Include header.php
+    
+  /* TO-DO: Include header.php
             Hint: Include this AFTER redirects so that HTML output does not break header() functions.
                   header.php is inside the includes folder and already connects to the database
   */
-
+  
   include 'includes/header.php';
-
 ?> 
 
 <div id="content" class="login-container animate-bottom">
