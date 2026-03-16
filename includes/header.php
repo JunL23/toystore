@@ -5,14 +5,13 @@
                     Both header.php and database-connection.php are inside the includes folder
     */
 
-    require_once('database-connection.php');
-
     /* TO-DO: Include session.php to handle login sessions
               Hint: Use require_once to avoid redeclaring functions if the file is loaded elsewhere.
                     Both header.php and session.php are inside the includes folder
     */
     
     require_once('session.php');
+    require_once('database-connection.php');
 ?>
 
 <!DOCTYPE html>
