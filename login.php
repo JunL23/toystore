@@ -41,6 +41,7 @@
     $user = authenticate($pdo, $username, $password);
 
     if ($user) {                               // If user data returned
+      print_r($user);
       login($user);                           // Call the login function to update session data                                             
       header('Location: profile.php');       // Redirect to profile page 
       exit;                                 // Stop further code running 

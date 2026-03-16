@@ -54,7 +54,6 @@
 		
 		$user = pdo($pdo, $sql, ['username' => $username, 'password' => $password])->fetch();
 
-		print_r($user);
 		return $user;
 	}
 
