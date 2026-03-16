@@ -8,6 +8,7 @@
 
   require_once('includes/database-connection.php');
 
+
   /* TO-DO: Include session.php to handle login sessions
           Hint: Use require_once to avoid redeclaring functions if the file is loaded elsewhere.
                 Load this before any redirects or login logic.
@@ -51,7 +52,6 @@
             Hint: Include this AFTER redirects so that HTML output does not break header() functions.
                   header.php is inside the includes folder and already connects to the database
   */
-  
   include 'includes/header.php';
 ?> 
 

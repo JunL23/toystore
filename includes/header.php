@@ -48,7 +48,6 @@
                             Hint: Check session.php for a flag variable tracking login status
                                   Consider using the null-coalescing operator
                 -->
-                
                 <li><a href="<?= ($logged_in) ? 'logout.php' : 'login.php' ?>"><?= ($logged_in) ? "Log Out" : "Log In" ?></a></li>  
                  
             </ul>
