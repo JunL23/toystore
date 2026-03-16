@@ -52,7 +52,7 @@
             Hint: Include this AFTER redirects so that HTML output does not break header() functions.
                   header.php is inside the includes folder and already connects to the database
   */
-  include 'includes/header.php';
+  require_once('includes/header.php');
 ?> 
 
 <div id="content" class="login-container animate-bottom">
