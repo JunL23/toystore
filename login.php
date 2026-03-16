@@ -52,7 +52,7 @@
                   header.php is inside the includes folder and already connects to the database
   */
 
-  require_once('includes/header.php');
+  include 'includes/header.php';
 
 ?> 
 
