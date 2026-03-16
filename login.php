@@ -6,7 +6,7 @@
                 Both header.php and database-connection.php are inside the includes folder
   */
 
-  require_once('database-connection.php');
+  require_once('includes/database-connection.php');
 
   /* TO-DO: Include session.php to handle login sessions
           Hint: Use require_once to avoid redeclaring functions if the file is loaded elsewhere.
@@ -14,7 +14,7 @@
                 Both header.php and session.php are inside the includes folder
   */
 
-  require_once('session.php');
+  require_once('includes/session.php');
   
   if ($logged_in) {                                       // If already logged in  
     header('Location: profile.php');                     // Redirect to profile page 
@@ -52,8 +52,8 @@
                   header.php is inside the includes folder and already connects to the database
   */
 
-  require_once('header.php');
-  
+  require_once('includes/header.php');
+
 ?> 
 
 <div id="content" class="login-container animate-bottom">
